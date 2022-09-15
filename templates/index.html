@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Drones</title>
+    <style>
+      body{
+        background: black;
+        background-size: cover;
+        font-family: 'Trebuchet MS', sans-serif; 
+      }
+      .container{
+        display: inline-block;
+      }
+     .typed-out{
+        overflow: hidden;
+        border-right: .15em solid #06dbe6;
+        color: #06dbe6;
+        margin-top: 130%;
+        margin-left: 200%;
+        white-space: nowrap;
+        animation: 
+            typing 5s forwards;
+        font-size: 1.6rem;
+        width: 0;
+     }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+  </style>
+  </head>
+  <body>
+    <!-- <video controls autoplay>
+      <source src="https://samplelib.com/lib/preview/mp3/sample-3s.mp3" type="audio/mpeg">
+    </video> -->
+
+    <div class="container">
+      <div class="typed-out">Hawk Eye <span style="color:white;">Catch You...!!!</span></div>
+    </div>
+    
+<script>
+    function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function demo() {
+  //  var x = document.getElementById('adio')
+  //  x.play()
+    for (let i = 0; i < 4; i++) {
+        // console.log(`Waiting ${i} seconds...`);
+        await sleep(i * 1000);
+    }
+    // console.log('Done');
+    window.location.href = "/login"
+}
+
+demo();
+</script>  
+</body>
+
+
+</html>

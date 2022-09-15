@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+ body{  
+   /* background: url("/static//images/image2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+          background-size: cover;
+
+          height: 17cm; */
+        background-color: black;
+          font-family: 'Roboto Mono', monospace;
+
+ }
+ul {
+  list-style-type: none;
+  width:150px;
+  padding: 0;
+  overflow: hidden;
+  margin-left:4cm;
+ margin-top: 2%;
+ position: absolute;
+ background-color: #151616;
+ border: 1px solid #06dbe6;
+ align-items: center;
+ justify-content: center;
+}
+
+li {
+  float: left;
+  
+  /* width: 00px; */
+}
+
+li a {
+  display: block;
+  color:#06dbe6;
+  text-align: center;
+  /* padding: 14px ; */
+  padding: 10px;
+  width: 125px;
+  text-decoration: none;
+
+  
+}
+
+li a:hover:not(.active) {
+  background-color: #06dbe6;
+  color:black;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+img{
+    margin-LEFT:0.1CM;
+    position: absolute;
+}
+
+.history
+{
+    /* width: 1000px; */
+    margin-top: 10%;
+    margin-left: 15%;
+    display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  /* padding: 0px; */
+  background-color: transparent;
+  box-shadow: 2px 5px  5px rgb(49, 49, 49);
+  padding: 25px;
+    /* grid-template-columns: auto 4; */
+}
+
+
+.data
+{
+    display: block;
+    height: 150px;
+    background-color: transparent;
+  border: 1px solid #06dbe1;
+  padding: 5px;
+  font-size: 15px;
+  color: #06dbe1;
+  /* text-align: center; */
+}
+
+
+.data img
+{
+    height: 100px;
+    width: 200px;
+    margin-left: 1%;
+}
+.data p
+{
+    margin-top: 120px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: rgb(5, 5, 5);
+  margin-left: 7.2cm;  
+  height: 3cm;
+  
+  
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  height: 2cm;
+  width: 4cm;
+  margin-top: 1cm;
+}
+
+.topnav a:hover {
+  background-color: #0dd8db;
+  color: black;
+  height: 2cm;
+  
+}
+
+.topnav a.active {
+  background-color: #0dd8db;
+  color: black;
+}
+
+</style>
+</head>
+<body>
+    <img src="/static//images/drdo.jpg" style="margin-right:20cm ;width: 100px;height: 100px; position: absolute;">  
+    
+
+
+
+    <!-- <audio src="/static//welcome.mp3"  ></audio>
+     -->
+     <!-- <audio/> -->
+     <a href="/home"><img src="/static//images/drdo.jpg"></a>
+
+     <div class="topnav">
+       <a class="active" href="#home"><h3>HOME</h3></a>
+       <a href="/livecam" target="_blank"><h3 style="margin-top:0.01cm">LIVE DETECTION</h3></a>
+       <a href="/upload"> <h3>VIDEO FEED</h3></a>
+       <a href="/history"><h3>HISTORY</h3></a>
+     </div>
+    <div class="history">
+        {% for i in range(length) %}
+     <div class="data">
+        <img src="{{imgs[i]}}" alt="">
+        <p>detected on <span style="color: white;">{{time[i]}}</span></p>
+     </div>
+    {% endfor %}  
+    </div>
+
+<script>
+  window.onload = function(){
+    document.getElementById('adio').play()
+  }
+</script>
+</body>
+
+</html>
+
+
